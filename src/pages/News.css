@@ -1,0 +1,21 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 0;
+}
+
+.container__news {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: normal;
+}
+
+.news__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  margin: 60px auto;
+}
