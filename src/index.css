@@ -1,4 +1,8 @@
 :root {
+  --color-primary: #113448;
+  --color-secondary: #c6a45c;
+  --color-text: #333;
+
   min-height: 100vh;
   display: flex;
   flex-direction: column;

@@ -35,6 +35,6 @@
   }
   p {
     font-size: 14px;
-    color: gray;
+    color: var(--color-text);
   }
 }

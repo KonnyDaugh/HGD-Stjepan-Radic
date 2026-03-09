@@ -13,13 +13,13 @@
 }
 
 .button__primary {
-  background: #b68a5a;
-  color: black;
+  background: var(--color-secondary);
+  color: var(--color-text);
   text-transform: uppercase;
 }
 
 .button__primary:hover {
   background: transparent;
-  border: 2px solid #b68a5a;
-  color: #b68a5a;
+  border: 2px solid var(--color-secondary);
+  color: var(--color-secondary);
 }
