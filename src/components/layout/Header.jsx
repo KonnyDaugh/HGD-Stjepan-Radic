@@ -5,7 +5,7 @@ import logo from "../../assets/logo.png"
 export default function Header() {
   return (
     <header className="header">
-      <div className="container header__inner">
+      <div className="header__inner">
         <div className="header__logo">
           <img src={logo} alt="logo" />
         </div>
