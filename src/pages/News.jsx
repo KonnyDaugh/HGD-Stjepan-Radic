@@ -1,6 +1,7 @@
 import "./News.css";
 import NewsCard from '../components/ui/Cards/NewsCard';
 import img from '../assets/images/news1.jpg';
+import Button from '../components/ui/Button/Button';
 
 function News() {
   return (
@@ -22,7 +23,7 @@ function News() {
                         date="12.03.2026"
                         image={img}/>
                 </div>
-                <button>Arhiva vijesti</button>
+                <Button variant="primary">Arhiva vijesti</Button>
             </div>
         </div>
     </section>

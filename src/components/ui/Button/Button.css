@@ -1,0 +1,25 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.button__primary {
+  background: #b68a5a;
+  color: black;
+  text-transform: uppercase;
+}
+
+.button__primary:hover {
+  background: transparent;
+  border: 2px solid #b68a5a;
+  color: #b68a5a;
+}
