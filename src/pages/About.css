@@ -1,0 +1,13 @@
+.about__wrap {
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.divider {
+  width: 100%;
+  max-width: 800px;
+  display: block;
+  margin: 40px auto;
+}
