@@ -1,7 +1,7 @@
 import divider from '../../../assets/decorations/divider.webp';
 import './NewsCard.css';
 
-function NewsCard({ title, date, text, image }) {
+function NewsCard({ title, date, image }) {
   return (
     <article className="news-card">
       <img src={image} alt={title} className="news-card__image" />
