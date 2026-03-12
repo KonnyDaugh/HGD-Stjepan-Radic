@@ -1,7 +1,7 @@
 import "./News.css";
 import NewsCard from '../components/ui/Cards/NewsCard';
-import img from '../assets/images/news1.jpg';
 import Button from '../components/ui/Button/Button';
+import { news } from "../data/news";
 
 function News() {
   return (
@@ -10,7 +10,11 @@ function News() {
             <div className="container__news">
                 <h1>Vijesti</h1>
                 <div className="news__list">
-                    <NewsCard 
+                    {news.map(item => (
+                        <NewsCard key={item.id} news={item} />
+                    ))}
+
+                    {/* <NewsCard 
                         title="Novi koncert orkestra"
                         date="12.03.2026"
                         image={img}/>
@@ -21,7 +25,7 @@ function News() {
                     <NewsCard 
                         title="Novi koncert orkestra"
                         date="12.03.2026"
-                        image={img}/>
+                        image={img}/> */}
                 </div>
                 <Button variant="primary">Arhiva vijesti</Button>
             </div>

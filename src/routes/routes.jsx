@@ -1,11 +1,12 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Home from "../pages/Home"
-import About from "../pages/About"
-import News from "../pages/News"
-import Press from "../pages/Press"
-import Gallery from "../pages/Gallery"
-import Contacts from "../pages/Contacts"
-import Layout from "../components/layout/Layout"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "../pages/Home";
+import About from "../pages/About";
+import News from "../pages/News";
+import Press from "../pages/Press";
+import Gallery from "../pages/Gallery";
+import Contacts from "../pages/Contacts";
+import Layout from "../components/layout/Layout";
+import NewsArticle from "../pages/NewsArticle";
 
 function Router() {
   return (
@@ -15,6 +16,7 @@ function Router() {
           <Route path="/" element={<Home />} />
           <Route path="/o-nama" element={<About />} />
           <Route path="/vijesti" element={<News />} />
+          <Route path="/vijesti/:slug" element={<NewsArticle />} />
           <Route path="/press" element={<Press />} />
           <Route path="/galerija" element={<Gallery />} />
           <Route path="/kontakti" element={<Contacts />} />
