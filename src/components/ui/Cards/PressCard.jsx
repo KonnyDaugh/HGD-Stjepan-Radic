@@ -1,9 +1,12 @@
 import divider from '../../../assets/decorations/divider.webp';
 import './PressCard.css';
 
-function PressCard({ title, press, text, image }) {
+function PressCard({ title, press, text, image, url }) {
   return (
-    <article className="press-card">
+    <a href={url} 
+        className="press-card"
+        target="_blank"
+        rel="noopener noreferrer">
       <img src={image} alt={title} className="press-card__image" />
 
       <div className="press-card__content">
@@ -12,7 +15,7 @@ function PressCard({ title, press, text, image }) {
         <img src={divider} alt="divider" className="divider"/>
         <p className='press-card__press-name' >{press}</p>      
       </div>
-    </article>
+    </a>
   );
 }
 
