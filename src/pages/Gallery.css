@@ -1,0 +1,39 @@
+.gallery-slide img {
+  width: 70%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.gallery-caption {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.gallery-wrapper {
+  position: relative;
+}
+
+.gallery-caption-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gallery-prev,
+.gallery-next {
+  margin: 0;
+  background: none;
+  border: none;
+  font-size: 40px;
+  cursor: pointer;
+  color: var(--color-secondary);
+}
+
+.gallery-prev {
+  left: 10px;
+}
+
+.gallery-next {
+  right: 10px;
+}
