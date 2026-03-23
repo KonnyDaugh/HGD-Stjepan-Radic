@@ -19,3 +19,10 @@ button {
     margin: 60px auto 0 auto;
   }
 }
+
+@media (min-width: 375px) {
+  .news__list {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
