@@ -11,13 +11,12 @@
   margin: 15px 105px 0 105px;
 }
 
-.gallery-wrapper {
+.gallery__inner {
   position: relative;
 }
 
 .gallery-caption-wrap {
-  display: flex;
-  justify-content: space-between;
+  display: block;
 }
 
 .gallery-prev,
@@ -30,10 +29,7 @@
   color: var(--color-secondary);
 }
 
-.gallery-prev {
-  left: 10px;
-}
-
-.gallery-next {
-  right: 10px;
+.gallery__controls {
+  display: flex;
+  justify-content: space-between;
 }
