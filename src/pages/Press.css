@@ -1,16 +1,17 @@
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 80px 0;
-}
-
-.container__press {
+.press__inner {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .press__list {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .press__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

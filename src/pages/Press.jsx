@@ -6,7 +6,7 @@ function Press() {
   return (
     <section className='press' >
         <div className="container">
-            <div className="container__press">
+            <div className="press__inner">
                 <h1>Mediji o nama</h1>
                 <div className="press__list">
                     {press.map(item => (
