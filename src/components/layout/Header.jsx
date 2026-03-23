@@ -1,10 +1,19 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
+
 import "./Header.css";
 import logo from "../../assets/logo.png";
 
 function Header() {
     const [isOpen, setIsOpen] = useState(false);
+
+    const location = useLocation();
+
+    useEffect(() => {
+        setIsOpen(false);
+    }, [location]);
   return (
     <header className="header">
       <div className="header__inner">
@@ -13,7 +22,7 @@ function Header() {
         </div>
 
         <nav className={`header__nav ${isOpen ? "header__nav-open" : ""}`}>
-          <NavLink to="/" onClick={() => setIsOpen(false)}>Početna</NavLink>
+          <NavLink to="/">Početna</NavLink>
           <NavLink to="/o-nama">O nama</NavLink>
           <NavLink to="/vijesti">Vijesti</NavLink>
           <NavLink to="/press">Press</NavLink>
