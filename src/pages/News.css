@@ -1,10 +1,4 @@
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 80px 0;
-}
-
-.container__news {
+.news__inner {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -18,4 +12,10 @@
 
 button {
   margin: 60px auto;
+}
+
+@media (min-width: 768px) {
+  .button {
+    margin: 60px auto 0 auto;
+  }
 }
