@@ -10,7 +10,7 @@ function Contacts() {
         <section className='contacts'>
             <div className="container">
                 <h1>Javite nam se</h1>
-                <div className="contacts__content">
+                <div className="contacts__inner">
                     <div className="contacts__info">
                         <p className='contacts__info-text'>Ukoliko se želite uključiti u naš rad, kao i za sve druge informacije o nama, dostupni smo preko kontakt forme te na navedenom broju mobitela.</p>
                         <p className='contacts__info-text'>Predsjednik: Goran Kovačević <br /> Tajnica: Maja Džoja <br /> Voditelj orkestra: Danijel Curić, mag. mus.</p>
