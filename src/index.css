@@ -64,3 +64,10 @@ h3 {
     padding: 48px 0;
   }
 }
+
+@media (min-width: 375px) {
+  .container {
+    max-width: 335px;
+    padding: 24px 0 36px 0;
+  }
+}

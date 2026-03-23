@@ -94,3 +94,12 @@
     z-index: 1000;
   }
 }
+
+@media (max-width: 375px) {
+  .header__inner {
+    margin: 0 24px;
+  }
+  .header__logo {
+    width: 204px;
+  }
+}
