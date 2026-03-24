@@ -10,13 +10,13 @@
   gap: 16px;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .press__list {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (min-width: 375px) {
+@media (max-width: 375px) {
   .press__list {
     grid-template-columns: 1fr;
   }

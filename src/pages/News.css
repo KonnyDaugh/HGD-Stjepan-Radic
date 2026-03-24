@@ -14,13 +14,13 @@ button {
   margin: 60px auto;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .button {
     margin: 60px auto 0 auto;
   }
 }
 
-@media (min-width: 375px) {
+@media (max-width: 375px) {
   .news__list {
     flex-direction: column;
     gap: 24px;

@@ -8,9 +8,11 @@
   border-radius: 8px;
 }
 
-.press-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+@media (hover: hover) and (pointer: fine) {
+  .press-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  }
 }
 
 .press-card__image {

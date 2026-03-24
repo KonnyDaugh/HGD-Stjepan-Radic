@@ -57,7 +57,7 @@
   font-family: Inter;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .contacts__inner {
     grid-template-columns: 1fr;
     gap: 36px;
@@ -68,5 +68,17 @@
   .contacts__social {
     display: flex;
     justify-content: center;
+  }
+}
+
+@media (max-width: 320px) {
+  .contacts__info-text {
+    font-size: 16px;
+    text-align: justify;
+  }
+  .contacts__form {
+    .button {
+      margin: 30px auto 20px auto;
+    }
   }
 }
