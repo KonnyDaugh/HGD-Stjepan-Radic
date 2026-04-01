@@ -1,5 +1,5 @@
 .hero {
-  min-height: 100vh;
+  min-height: 100svh;
   position: relative;
 
   background-image: url("../assets/images/hero.webp");
@@ -27,8 +27,10 @@
   position: relative;
   z-index: 1;
   color: white;
-  width: 1200px;
+  width: 100%;
+  max-width: 1200px;
   text-align: center;
+  margin: 0 auto;
 }
 
 .hero__title {
@@ -42,7 +44,7 @@ p {
 
 @media (max-width: 768px) {
   .hero__content {
-    width: 560px;
+    padding: 0 20px;
   }
   .hero__title {
     font-size: 36px;
@@ -54,8 +56,7 @@ p {
 
 @media (max-width: 375px) {
   .hero__content {
-    width: 335px;
-    gap: 20px;
+    padding: 0 16px;
   }
   .hero__title {
     font-size: 28px;

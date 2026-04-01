@@ -15,6 +15,10 @@ button {
 }
 
 @media (max-width: 768px) {
+  .news__list {
+    flex-direction: column;
+    gap: 24px;
+  }
   .button {
     margin: 60px auto 0 auto;
   }

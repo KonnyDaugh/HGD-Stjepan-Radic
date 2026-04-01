@@ -16,7 +16,7 @@
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 480px) {
   .press__list {
     grid-template-columns: 1fr;
   }

@@ -34,3 +34,9 @@
   display: flex;
   justify-content: space-between;
 }
+
+@media (max-width: 480px) {
+  .gallery-slide img {
+    width: 100%;
+  }
+}

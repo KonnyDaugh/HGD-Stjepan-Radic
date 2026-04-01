@@ -15,7 +15,7 @@ function NewsArticle() {
   }
 
   return (
-    <article className="news__item">
+    <section className="news__item">
       <div className="container">
         <div className="news__item-inner">
             <h1>{article.title}</h1>
@@ -29,7 +29,7 @@ function NewsArticle() {
         </div>
       </div>
 
-    </article>
+    </section>
 
     
   )
