@@ -32,8 +32,14 @@ section {
 }
 
 @media (max-width: 768px) {
-  .section {
+  section {
     padding: 48px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 24px 0;
   }
 }
 

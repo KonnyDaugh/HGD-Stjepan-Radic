@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { useEffect } from "react";
 import './Contacts.css';
 import facebook from '../assets/decorations/facebook-icon.svg';
 import inst from '../assets/decorations/inst-icon.svg';
@@ -6,6 +8,49 @@ import phone from '../assets/decorations/phone-icon.svg';
 import location from '../assets/decorations/location-icon.svg';
 
 function Contacts() {
+    const [status, setStatus] = useState("");
+    const [isLoading, setIsLoading] = useState(false);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        setIsLoading(true);
+        setStatus("");
+
+        const form = e.target;
+        const data = new FormData(form);
+
+        try {
+            const response = await fetch("https://formspree.io/f/xreollde", {
+                method: "POST",
+                body: data,
+                headers: {
+                    Accept: "application/json",
+                },
+            });
+            if (response.ok) {
+                setStatus("success");
+                form.reset();
+            } else {
+                setStatus("error");
+            }
+        } catch (error) {
+            setStatus("error");
+        } finally {
+            setIsLoading(false);
+        }       
+    };
+
+    useEffect(() => {
+        if (status) {
+            const timer = setTimeout(() => {
+            setStatus("");
+            }, 3000);
+
+            return () => clearTimeout(timer);
+        }
+    }, [status]);
+
   return (
         <section className='contacts'>
             <div className="container">
@@ -40,12 +85,19 @@ function Contacts() {
                             </div>
                         </div>
                     </div>
-                    <div className="contacts__form">
-                        <input className='contacts__input' type="text" name='name' placeholder='Ime' />
-                        <input className='contacts__input' type="email" name='email' placeholder='Email' />
-                        <textarea className='contacts__input-text' type="text" name='text' placeholder='Vaša poruka' />
-                        <button className='button button__primary' type='submit'>Pošali puruku</button>
-                    </div>
+                    <form onSubmit={handleSubmit} className="contacts__form">
+                        <input className='contacts__input' type="text" name='name' placeholder='Ime' required />
+                        <input className='contacts__input' type="email" name='email' placeholder='Email' required />
+                        <textarea className='contacts__input-text' type="text" name='text' placeholder='Vaša poruka' required />
+                        <button className='button button__primary' type='submit' disabled={isLoading}>{isLoading ? "Šalje se..." : "Pošalji poruku"}</button>
+
+                        {status && (
+                            <div className={`form-message ${status}`}>
+                                {status === "success" && "Poruka je poslana! ✅"}
+                                {status === "error" && "Došlo je do pogreške. Pokušajte ponovno. ❌"}
+                            </div>
+                        )}
+                    </form>
                 </div>
             </div>
         </section>

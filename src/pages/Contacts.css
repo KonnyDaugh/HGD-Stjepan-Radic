@@ -57,6 +57,23 @@
   font-family: Inter;
 }
 
+.form-message {
+  margin-top: 16px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.form-message.success {
+  background-color: #e6f9ed;
+  color: #1a7f37;
+}
+
+.form-message.error {
+  background-color: #fdecea;
+  color: #b42318;
+}
+
 @media (max-width: 768px) {
   .contacts__inner {
     grid-template-columns: 1fr;
