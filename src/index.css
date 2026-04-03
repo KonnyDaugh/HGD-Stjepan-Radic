@@ -20,6 +20,13 @@
   -webkit-text-size-adjust: 100%;
 }
 
+.app {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: white;
+}
+
 .container {
   width: 100%;
   max-width: 1200px;
@@ -55,20 +62,21 @@ a {
   color: inherit;
 }
 
-html,
-body,
 #root {
-  height: 100%;
-  margin: 0;
-}
-
-body {
+  min-height: 100%;
   display: flex;
   flex-direction: column;
+}
+html {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
   background-color: var(--color-primary);
 }
 
-.main {
+main {
   flex: 1;
 }
 

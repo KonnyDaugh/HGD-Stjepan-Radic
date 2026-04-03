@@ -1,12 +1,25 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from "swiper/modules";
 import { slides } from "../data/slides";
+import { useState } from "react";
 
 import 'swiper/css';
 import "swiper/css/navigation";
 import './Gallery.css';
 
 function Gallery() {
+    const [lightboxOpen, setLightboxOpen] = useState(false);
+    const [activeSlide, setActiveSlide] = useState(null);
+
+    const openLightbox = (slide) => {
+        setActiveSlide(slide);
+        setLightboxOpen(true);
+    };
+
+    const closeLightbox = () => {
+        setLightboxOpen(false);
+        setActiveSlide(null);
+    };
   return (
     <section className='gallery'>
         <div className="container">
@@ -31,6 +44,7 @@ function Gallery() {
                                 src={slide.image}
                                 alt={slide.title}
                                 loading="lazy"
+                                onClick={() => openLightbox(slide)}
                                 />
 
                                 <div className="gallery-caption">
@@ -51,6 +65,17 @@ function Gallery() {
                 </div>
             </div>
         </div>
+        {lightboxOpen && (
+            <div className="lightbox" onClick={closeLightbox}>
+            <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+                <img src={activeSlide.image} alt={activeSlide.title} />
+                <button className="lightbox-close" onClick={closeLightbox}>×</button>
+                <h3>{activeSlide.title}</h3>
+                <p>{activeSlide.text}</p>
+            </div>
+            </div>
+        )}
+
     </section>
   );
 };
