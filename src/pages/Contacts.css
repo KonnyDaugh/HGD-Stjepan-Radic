@@ -12,19 +12,26 @@
   gap: 20px;
 }
 
-.contacts__info-text {
-  font-size: 18px;
-  color: var(--color-text);
+.contacts__info-connect div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.contacts__info-connect {
-  display: flex;
-  flex-direction: column;
-  div {
-    display: flex;
-    gap: 10px;
-    justify-content: start;
-  }
+.contacts__info-connect img {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.contacts__info-connect p,
+.contacts__info-connect a {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.contacts__info-connect a {
+  white-space: nowrap;
 }
 
 .contacts__form {

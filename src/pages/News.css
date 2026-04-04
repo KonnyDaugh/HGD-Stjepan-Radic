@@ -16,7 +16,6 @@ button {
 
 @media (max-width: 768px) {
   .news__list {
-    flex-direction: column;
     gap: 24px;
   }
   .button {
@@ -24,7 +23,7 @@ button {
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 480px) {
   .news__list {
     flex-direction: column;
     gap: 24px;

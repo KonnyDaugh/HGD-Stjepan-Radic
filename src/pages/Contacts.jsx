@@ -62,7 +62,7 @@ function Contacts() {
                         <div className="contacts__info-connect">
                             <div>
                                 <img src={location} alt="location" />
-                                <address>Starčevićeva 25, 21251 Žrnovnica</address>
+                                <p>Starčevićeva 25, 21251 Žrnovnica</p>
                             </div>
                             <div>
                                 <img src={phone} alt="phone" />
