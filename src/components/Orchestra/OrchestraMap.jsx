@@ -20,7 +20,7 @@ export default function OrchestraMap({ seats, onSeatClick }) {
         />
       ))}
         <text x="150" y="30" textAnchor="middle">Flaute</text>
-        <text x="350" y="30" textAnchor="middle">Klarineti</text>
+        <text x="450" y="30" textAnchor="middle">Klarineti</text>
 
         <text x="300" y="100" textAnchor="middle">Saksofoni</text>
         <text x="300" y="160" textAnchor="middle">Trube</text>

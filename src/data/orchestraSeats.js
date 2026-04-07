@@ -11,14 +11,14 @@ export const orchestraSeats = [
   { id: "fl3", x: 200, y: 50, section: "flute", musician: null },
 
   // 🎵 КЛАРНЕТЫ (3)
-  { id: "cl1", x: 300, y: 50, section: "clarinet", musician: null },
-  { id: "cl2", x: 350, y: 50, section: "clarinet", musician: null },
-  { id: "cl3", x: 400, y: 50, section: "clarinet", musician: null },
+  { id: "cl1", x: 400, y: 50, section: "clarinet", musician: null },
+  { id: "cl2", x: 450, y: 50, section: "clarinet", musician: null },
+  { id: "cl3", x: 500, y: 50, section: "clarinet", musician: null },
 
   // 🎷 САКСОФОНЫ (7)
   ...Array.from({ length: 7 }).map((_, i) => ({
     id: `sx${i}`,
-    x: 80 + i * 50,
+    x: 140 + i * 50,
     y: 120,
     section: "sax",
     musician: null
@@ -27,7 +27,7 @@ export const orchestraSeats = [
   // 🎺 ТРУБЫ (7)
   ...Array.from({ length: 7 }).map((_, i) => ({
     id: `tr${i}`,
-    x: 80 + i * 50,
+    x: 140 + i * 50,
     y: 180,
     section: "trumpet",
     musician: null
