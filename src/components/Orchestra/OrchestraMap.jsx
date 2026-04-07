@@ -19,6 +19,16 @@ export default function OrchestraMap({ seats, onSeatClick }) {
           onMouseLeave={() => setHoveredSeat(null)}
         />
       ))}
+        <text x="150" y="30" textAnchor="middle">Flaute</text>
+        <text x="350" y="30" textAnchor="middle">Klarineti</text>
+
+        <text x="300" y="100" textAnchor="middle">Saksofoni</text>
+        <text x="300" y="160" textAnchor="middle">Trube</text>
+
+        <text x="260" y="220" textAnchor="middle">Tromboni</text>
+        <text x="100" y="220" textAnchor="middle">Tube</text>
+
+        <text x="300" y="280" textAnchor="middle">Ritam sekcija</text>
     </svg>
   );
 }

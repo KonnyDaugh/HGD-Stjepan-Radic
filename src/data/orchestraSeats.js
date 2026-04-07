@@ -1,6 +1,12 @@
+import daria from '../assets/musicians/daria-diachenko.webp';
+
 export const orchestraSeats = [
   // 🎵 ФЛЕЙТА (3)
-  { id: "fl1", x: 100, y: 50, section: "flute", musician: null },
+  { id: "fl1", x: 100, y: 50, section: "flute", musician: {
+    name: 'Darja Djačenko',
+    instrument: 'Flauta',
+    photo: daria
+  } },
   { id: "fl2", x: 150, y: 50, section: "flute", musician: null },
   { id: "fl3", x: 200, y: 50, section: "flute", musician: null },
 

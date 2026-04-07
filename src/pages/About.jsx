@@ -36,6 +36,11 @@ function About() {
                     >
                         {activeSeat.musician ? (
                             <>
+                                <img
+                                    src={activeSeat.musician?.photo}
+                                    alt={activeSeat.musician?.name}
+                                    className="modal-photo"
+                                />
                                 <h3>{activeSeat.musician.name}</h3>
                                 <p>{activeSeat.section}</p>
                             </>
