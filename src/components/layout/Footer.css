@@ -1,12 +1,16 @@
 .footer {
   width: 100%;
   height: auto;
-  background-color: var(--color-primary);
   display: flex;
   align-items: center;
   justify-content: center;
   color: #ffffff;
   border: none;
+  background: linear-gradient(
+    to top,
+    var(--color-primary),
+    transparent
+  );
 }
 
 .footer__text {
