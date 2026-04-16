@@ -22,7 +22,7 @@
 .hero__content {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 48px;
   align-items: center;
   position: relative;
   z-index: 1;
@@ -38,7 +38,8 @@
   color: white;
 }
 
-p {
+.hero__text {
+  width: 60%;
   font-size: 22px;
 }
 

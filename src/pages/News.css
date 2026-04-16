@@ -3,11 +3,13 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: normal;
+  gap: 48px;
 }
 
 .news__list {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 36px;
 }
 
 button {
