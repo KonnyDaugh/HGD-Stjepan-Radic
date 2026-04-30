@@ -84,6 +84,13 @@
   animation-delay: 0.6s;
 }
 
+.event {
+  background: rgba(34, 84, 110, 0.2);
+  border-radius: 25px;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
 @media (max-width: 768px) {
   .hero__content {
     padding: 0 20px;

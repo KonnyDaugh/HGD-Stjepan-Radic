@@ -1,5 +1,6 @@
 import './Home.css';
 import { Link } from "react-router-dom";
+import EventCard from '../components/ui/Cards/EventCard';
 
 function Home() {
   return (
@@ -16,11 +17,7 @@ function Home() {
         <div className="container">
           <h2>Predstojeći nastupi</h2>
 
-          {/* сюда потом добавишь список событий */}
-          <div className="events__list">
-            <div className="event">Event 1</div>
-            <div className="event">Event 2</div>
-          </div>
+          <EventCard />
         </div>
       </section>
     </>
