@@ -15,7 +15,7 @@ function Home() {
 
       <section className="events">
         <div className="container">
-          <h2>Predstojeći nastupi</h2>
+          <h2>Predstojeći nastup</h2>
 
           <EventCard />
         </div>

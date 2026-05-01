@@ -1,18 +1,14 @@
 .event-card {
-  display: grid;
-  grid-template-columns: 120px 1fr 40%;
+  display: flex;
   gap: 32px;
+  align-items: flex-start;
+  justify-content: start;
 
   padding: 32px;
   border-radius: 20px;
 
   position: relative;
   overflow: hidden;
-  background: linear-gradient(
-    to right,
-    var(--color-primary) 60%,
-    transparent 40%
-  );
 
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -26,37 +22,64 @@
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
+.event-card__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.event-card__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.event-card__bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
 .event-card__type {
   font-size: 12px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  opacity: 0.7;
+  color: var(--color-secondary);
 }
 
+.event-card__date-icon {
+  width: 48px;
+  height: 48px;
+}
 
 .event-card__date {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 0 16px;
 
-  border-right: 1px solid rgba(255, 255, 255, 0.2);
-  padding-right: 16px;
+  border-right: 2px solid rgba(229, 229, 229);
 }
 
 .event-card__day {
-  font-size: 48px;
-  font-weight: 600;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 92px;
+  font-weight: 400;
+  color: var(--color-primary);
+  line-height: 1;
 }
 
 .event-card__month {
-  font-size: 12px;
+  font-size: 18px;
   letter-spacing: 2px;
+  color: var(--color-primary);
 }
 
 .event-card__year {
   font-size: 14px;
   opacity: 0.7;
+  color: var(--color-primary);
 }
 
 .event-card__content {
@@ -67,20 +90,45 @@
 }
 
 .event-card__title {
-  font-size: 28px;
-  font-weight: 600;
-  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: var(--color-primary);
   text-align: start;
+  line-height: normal;
+  margin: 0;
+}
+
+.line {
+  width: 50px;
+  height: 1px;
+  background-color: var(--color-secondary);
+  margin: 8px 0;
 }
 
 .event-card__meta {
   display: flex;
   gap: 20px;
+  align-items: center;
+  justify-content: start;
+}
+.event-card__location-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.event-card__location,
+.event-card__time {
+  font-size: 14px;
+  color: var(--color-primary);
+  margin: 0;
 }
 
 .event-card__description {
+  font-size: 14px;
   opacity: 0.8;
   line-height: 1.5;
+  color: var(--color-primary);
 }
 
 .event-card__actions {
@@ -89,34 +137,36 @@
   margin-top: 16px;
 }
 
-.event-card__image {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 40%;
-  height: 100%;
-
-  background-size: cover;
-  background-position: center;
-
-  z-index: 0;
+.button {
+  margin: 0;
 }
 
-.event-card__image::after {
-  content: "";
-  position: absolute;
-  inset: 0;
+.button__primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 
-  background: linear-gradient(
-    to left,
-    rgba(17, 52, 72, 0.1) 0%,
-    rgba(17, 52, 72, 0.6) 50%,
-    rgba(17, 52, 72, 0.9) 100%
-  );
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+
+  cursor: pointer;
 }
 
-.event-card__content,
-.event-card__date {
+.button-ticket-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.button__secondary {
+  background-color: transparent;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+
+.event-card__date,
+.event-card__content {
   position: relative;
   z-index: 2;
 }

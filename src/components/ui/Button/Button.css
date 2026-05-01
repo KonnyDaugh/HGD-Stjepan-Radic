@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
   padding: 12px 24px;
-  font-size: 16px;
+  font-size: 14px;
   border-radius: 8px;
   border: none;
   cursor: pointer;
@@ -14,7 +14,7 @@
 
 .button__primary {
   background: var(--color-secondary);
-  color: var(--color-text);
+  color: white;
   text-transform: uppercase;
 }
 
@@ -22,4 +22,11 @@
   background: transparent;
   border: 2px solid var(--color-secondary);
   color: var(--color-secondary);
+}
+
+.button__secondary {
+  background-color: transparent;
+  border: 1px solid var(--color-primary, 40%);
+  color: var(--color-primary);
+  border-radius: 24px;
 }
