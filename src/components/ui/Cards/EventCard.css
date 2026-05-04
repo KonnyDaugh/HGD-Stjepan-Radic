@@ -15,7 +15,16 @@
 
   border: 1px solid rgba(255, 255, 255, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
+
+.event-card__visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
 .event-card:hover {
   transform: translateY(-5px);
@@ -87,6 +96,7 @@
   flex-direction: column;
   justify-content: center;
   gap: 16px;
+  max-width: 360px;
 }
 
 .event-card__title {
@@ -156,6 +166,10 @@
 .button-ticket-icon {
   width: 20px;
   height: 20px;
+  fill: white;
+}
+.button:hover  .button-ticket-icon{
+  fill: var(--color-secondary);
 }
 
 .button__secondary {
